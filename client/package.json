@@ -1,0 +1,30 @@
+{
+  "name": "pizza-way-client",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "watchdog": "node ../tools/watchdog.mjs --watch",
+    "disk": "node ../tools/watchdog.mjs",
+    "clean": "node ../tools/watchdog.mjs --clean"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.3.5",
+    "next": "^16.4.6",
+    "postcss": "^8.5.32",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.5",
+    "zod": "^4.6.7",
+    "zustand": "^5.0.16"
+  }
+}

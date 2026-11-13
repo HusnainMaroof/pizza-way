@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+/*
+ * Pizza Way theme (Tailwind v4).
+ * KEY IDEA: --spacing is the fluid unit --u (1 design px at 1440 wide), so numeric utilities map 1:1 to Figma px:
+ *   w-680 = 680px at 1440 (scales with screen), p-80, gap-48, h-532, leading-90, top-20, -mt-4 ...
+ * Font sizes: text-110, text-14 ... (also scaled, min 12px). Radii: rounded-24, rounded-pill.
+ * Breakpoints: sm = 641px, lg = 1024px. Use max-lg: (tablet and below) and max-sm: (phones, <=640px).
+ */
+@theme {
+  --spacing: var(--u);
+
+  --breakpoint-sm: 641px;
+  --breakpoint-lg: 1024px;
+
+  --color-pw-green-950: #033513;
+  --color-pw-green-900: #024d1a;
+  --color-pw-green-700: #03872d;
+  --color-pw-green-600: #036a24;
+  --color-pw-green-500: #20c955;
+  --color-pw-green-100: #e8f5e9;
+  --color-pw-red-600: #e50e01;
+  --color-pw-ink: #131c13;
+  --color-pw-muted: #606860;
+  --color-pw-surface: #f8faf8;
+  --color-pw-line: #e2e6e2;
+  --color-pw-footer: #202020;
+
+  --font-heading: var(--font-outfit), system-ui, sans-serif;
+  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+
+  --radius-pill: 999px;
+  --text-11: max(12px, calc(11 * var(--u)));
+  --text-12: max(12px, calc(12 * var(--u)));
+  --text-13: max(12px, calc(13 * var(--u)));
+  --text-14: max(12px, calc(14 * var(--u)));
+  --text-15: max(12px, calc(15 * var(--u)));
+  --text-16: max(12px, calc(16 * var(--u)));
+  --text-18: max(12px, calc(18 * var(--u)));
+  --text-20: max(12px, calc(20 * var(--u)));
+  --text-22: max(12px, calc(22 * var(--u)));
+  --text-24: max(12px, calc(24 * var(--u)));
+  --text-26: max(12px, calc(26 * var(--u)));
+  --text-28: max(12px, calc(28 * var(--u)));
+  --text-32: max(12px, calc(32 * var(--u)));
+  --text-36: max(12px, calc(36 * var(--u)));
+  --text-40: max(12px, calc(40 * var(--u)));
+  --text-44: max(12px, calc(44 * var(--u)));
+  --text-48: max(12px, calc(48 * var(--u)));
+  --text-56: max(12px, calc(56 * var(--u)));
+  --text-64: max(12px, calc(64 * var(--u)));
+  --text-72: max(12px, calc(72 * var(--u)));
+  --text-110: max(12px, calc(110 * var(--u)));
+  --radius-6: calc(6 * var(--u));
+  --radius-10: calc(10 * var(--u));
+  --radius-12: calc(12 * var(--u));
+  --radius-16: calc(16 * var(--u));
+  --radius-20: calc(20 * var(--u));
+  --radius-24: calc(24 * var(--u));
+  --radius-28: calc(28 * var(--u));
+  --radius-30: calc(30 * var(--u));
+  --radius-32: calc(32 * var(--u));
+  --radius-40: calc(40 * var(--u));
+}
+
+/* Fluid unit: 1 design px at 1440 wide. Desktop 0.6x-1.5x, tablet and phone fixed ranges. */
+:root {
+  --u: clamp(0.6px, calc(100vw / 1440), 1.5px);
+  color-scheme: light;
+}
+@media (max-width: 1023px) {
+  :root { --u: clamp(0.6px, calc(100vw / 1100), 0.93px); }
+}
+@media (max-width: 640px) {
+  :root { --u: 0.72px; }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-pw-ink);
+  line-height: 1.5;
+}
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+}
