@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function MenuPage() {
   return (
     <>
-      <NavHeader />
+      <NavHeader sticky />
       <main>
         <MenuHero />
         <MenuBrowser />
