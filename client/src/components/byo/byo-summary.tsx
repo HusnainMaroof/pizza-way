@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { MAX_QTY } from "@/lib/byo-data";
 import { useByoStore } from "@/store/byo-store";
+import { PizzaPreview } from "./pizza-3d/pizza-preview";
 
 const money = (n: number) => `£${n.toFixed(2)}`;
 
@@ -55,18 +56,9 @@ export function SummarySidebar() {
       id="byo-summary"
       className="flex w-full flex-col items-start gap-32 rounded-28 border-[1.5px] border-solid border-pw-line bg-pw-surface p-32 max-lg:gap-[24px] max-lg:rounded-[24px] max-lg:p-[24px] max-sm:gap-[20px] max-sm:rounded-[20px] max-sm:p-[16px]"
     >
-      {/* Preview */}
-      <div className="flex h-280 w-full shrink-0 items-center justify-center rounded-20 border border-solid border-pw-line bg-white max-lg:h-[260px] max-lg:rounded-[16px] max-sm:h-auto max-sm:py-[20px]">
-        <div className="size-220 shrink-0 overflow-hidden rounded-pill max-lg:size-[200px] max-sm:aspect-square max-sm:h-auto max-sm:w-[min(200px,60vw)]">
-          <Image
-            src="/brand/byo/pizza-preview.png"
-            alt="Preview of your custom pizza"
-            width={220}
-            height={220}
-            sizes="(max-width: 640px) 60vw, (max-width: 1023px) 200px, 16vw"
-            className="block size-full object-cover"
-          />
-        </div>
+      {/* Preview: interactive 3D pizza (falls back to the photo) */}
+      <div className="h-312 w-full shrink-0 overflow-hidden rounded-20 border border-solid border-pw-line bg-white max-lg:h-[260px] max-lg:rounded-[16px] max-sm:h-[220px]">
+        <PizzaPreview />
       </div>
 
       {/* Specification */}

@@ -17,7 +17,7 @@ export function ProgressRibbon() {
       aria-label="Build your pizza steps"
       className="w-full overflow-x-auto border-b-[1.5px] border-pw-line bg-white [scrollbar-width:none]"
     >
-      <ol className="flex min-w-full items-center justify-between gap-16 px-80 py-20 max-lg:w-max max-lg:gap-[24px] max-lg:px-[40px] max-lg:py-[12px] max-sm:min-w-full max-sm:w-full max-sm:gap-[4px] max-sm:px-[12px] max-sm:py-[8px]">
+      <ol className="flex min-w-full items-center justify-between gap-16 px-80 py-12 max-lg:w-max max-lg:gap-[24px] max-lg:px-[40px] max-lg:py-[12px] max-sm:min-w-full max-sm:w-full max-sm:gap-[4px] max-sm:px-[12px] max-sm:py-[8px]">
         {STEPS.map((s) => {
           const active = s.id === step;
           return (

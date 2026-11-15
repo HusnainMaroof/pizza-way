@@ -60,11 +60,11 @@ export function ByoConfigurator() {
   const toggleTopping = useByoStore((s) => s.toggleTopping);
 
   return (
-    <div className="flex w-full flex-col items-start gap-48 max-lg:gap-[40px] max-sm:gap-[32px]">
+    <div className="flex w-full flex-col items-start gap-24 max-lg:gap-[40px] max-sm:gap-[32px]">
       {/* Size */}
       <section id="byo-size" className="w-full scroll-mt-120 max-lg:scroll-mt-[96px]">
         <fieldset className="m-0 w-full min-w-0 border-0 p-0">
-          <legend className={`${LEGEND} mb-20 max-lg:mb-[16px]`}>Choose Your Size</legend>
+          <legend className={`${LEGEND} mb-12 max-lg:mb-[16px]`}>Choose Your Size</legend>
           <div className="grid w-full grid-cols-4 gap-16 max-lg:gap-[12px] max-sm:grid-cols-2">
             {SIZES.map((s) => (
               <label
@@ -97,10 +97,10 @@ export function ByoConfigurator() {
       {/* Base: sauce + crust */}
       <section
         id="byo-base"
-        className="flex w-full scroll-mt-120 flex-col items-start gap-48 max-lg:scroll-mt-[96px] max-lg:gap-[40px] max-sm:gap-[32px]"
+        className="flex w-full scroll-mt-120 flex-col items-start gap-24 max-lg:scroll-mt-[96px] max-lg:gap-[40px] max-sm:gap-[32px]"
       >
         <fieldset className="m-0 w-full min-w-0 border-0 p-0">
-          <legend className={`${LEGEND} mb-20 max-lg:mb-[16px]`}>Choose Your Base Sauce</legend>
+          <legend className={`${LEGEND} mb-12 max-lg:mb-[16px]`}>Choose Your Base Sauce</legend>
           <div className="flex w-full items-stretch gap-16 max-lg:gap-[12px] max-sm:flex-col">
             {SAUCES.map((s) => (
               <label
@@ -128,7 +128,7 @@ export function ByoConfigurator() {
         </fieldset>
 
         <fieldset className="m-0 w-full min-w-0 border-0 p-0">
-          <legend className={`${LEGEND} mb-20 max-lg:mb-[16px]`}>Choose Your Crust</legend>
+          <legend className={`${LEGEND} mb-12 max-lg:mb-[16px]`}>Choose Your Crust</legend>
           <div className="flex w-full flex-wrap content-start items-start gap-12 max-lg:gap-[10px]">
             {CRUSTS.map((c) => (
               <label
@@ -158,16 +158,16 @@ export function ByoConfigurator() {
       {/* Toppings */}
       <section id="byo-toppings" className="w-full scroll-mt-120 max-lg:scroll-mt-[96px]">
         <fieldset className="m-0 w-full min-w-0 border-0 p-0">
-          <legend className={`${LEGEND} mb-32 max-lg:mb-[24px]`}>
+          <legend className={`${LEGEND} mb-16 max-lg:mb-[24px]`}>
             Add Toppings (from {money(TOPPING_PRICE)} each)
           </legend>
-          <div className="flex w-full flex-col items-start gap-32 max-lg:gap-[24px]">
+          <div className="flex w-full flex-col items-start gap-16 max-lg:gap-[24px]">
             {TOPPING_CATEGORIES.map((cat) => (
               <div
                 key={cat.id}
                 role="group"
                 aria-labelledby={`byo-cat-${cat.id}`}
-                className="flex w-full flex-col items-start gap-16 max-lg:gap-[12px]"
+                className="flex w-full flex-col items-start gap-8 max-lg:gap-[12px]"
               >
                 <p
                   id={`byo-cat-${cat.id}`}

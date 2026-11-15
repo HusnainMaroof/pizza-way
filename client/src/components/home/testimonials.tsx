@@ -221,7 +221,7 @@ export function Testimonials() {
                       aria-hidden={!visible}
                       whileHover={{ y: -6 }}
                       transition={SPRING_SOFT}
-                      className="shrink-0 grow-0 basis-[calc((100%_-_var(--spacing)_*_48)_/_3)] min-w-0 m-0 flex flex-col items-start gap-24 p-40 bg-pw-surface border border-pw-line rounded-24 select-none max-lg:basis-[calc((100%_-_16px)_/_2)] max-lg:gap-[16px] max-lg:p-[24px] max-[760px]:p-[28px] max-[641px]:basis-full max-sm:py-[24px] max-sm:px-[20px] max-sm:rounded-[20px]"
+                      className="shrink-0 grow-0 basis-[calc((100%_-_var(--u)_*_48)_/_3)] min-w-0 m-0 flex flex-col items-start gap-24 p-40 bg-pw-surface border border-pw-line rounded-24 select-none max-lg:basis-[calc((100%_-_16px)_/_2)] max-lg:gap-[16px] max-lg:p-[24px] max-[760px]:p-[28px] max-[641px]:basis-full max-sm:py-[24px] max-sm:px-[20px] max-sm:rounded-[20px]"
                     >
                       <div className="flex gap-4" role="img" aria-label="5 out of 5 stars">
                         {Array.from({ length: 5 }, (_, s) => (

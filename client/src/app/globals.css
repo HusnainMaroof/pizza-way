@@ -8,8 +8,6 @@
  * Breakpoints: sm = 641px, lg = 1024px. Use max-lg: (tablet and below) and max-sm: (phones, <=640px).
  */
 @theme {
-  --spacing: var(--u);
-
   --breakpoint-sm: 641px;
   --breakpoint-lg: 1024px;
 
@@ -30,6 +28,12 @@
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
 
   --radius-pill: 999px;
+}
+
+/* Inline (resolved where used), so a local --u override rescales spacing, text and radii.
+ * Used by the build-your-pizza stage to fit one screen. */
+@theme inline {
+  --spacing: var(--u);
   --text-11: max(12px, calc(11 * var(--u)));
   --text-12: max(12px, calc(12 * var(--u)));
   --text-13: max(12px, calc(13 * var(--u)));
